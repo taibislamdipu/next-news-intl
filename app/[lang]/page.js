@@ -1,5 +1,4 @@
 import Featured from "@/components/Featured";
-import MarqueeBanner from "@/components/MarqueeBanner";
 import NewsList from "@/components/NewsList";
 
 export default async function Home() {
@@ -8,7 +7,6 @@ export default async function Home() {
 
   return (
     <div>
-      <MarqueeBanner />
       <main className="max-w-7xl mx-auto px-4 py-8">
         <Featured />
         <section>

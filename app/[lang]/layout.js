@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import MarqueeBanner from "@/components/MarqueeBanner";
 import "../globals.css";
 
 export const metadata = {
@@ -12,6 +13,7 @@ export default function RootLayout({ children, params }) {
     <html lang="en">
       <body className="antialiased">
         <Header lang={params.lang} />
+        <MarqueeBanner />
         {children}
         <Footer />
       </body>
