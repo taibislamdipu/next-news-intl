@@ -7,7 +7,7 @@ export default function NewsCard({ news }) {
     <Link href={`news/${news.article_id}`}>
       <article className="bg-white rounded-lg shadow-sm overflow-hidden news-card">
         <Image
-          src={news.image_url || "https://placehold.co/228x192"}
+          src={news.image_url || "/assets/placeholder-img.png"}
           alt="Technology news"
           className="w-full object-cover"
           width={288}

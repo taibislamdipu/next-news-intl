@@ -23,8 +23,8 @@ export default async function NewsDetails({ id, lang }) {
 
             <div className="mb-8">
               <Image
-                src={newsData.image_url || "https://placehold.co/800x600"}
-                alt="Ferris wheel against sky"
+                src={newsData.image_url || "/assets/placeholder-img.png"}
+                alt={newsData.title}
                 className="rounded-lg shadow-sm"
                 width={800}
                 height={600}
