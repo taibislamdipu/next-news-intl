@@ -1,8 +1,10 @@
+import { getDictionary } from "@/app/[lang]/dictionaries";
 import BroadcastIcon from "@/icons/BroadcastIcon";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Header() {
+export default async function Header({ lang }) {
+  const dictionary = await getDictionary(lang);
   return (
     <header className="bg-white border-b border-gray-200 px-4 py-3">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -27,7 +29,7 @@ export default function Header() {
             <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
               <BroadcastIcon />
             </div>
-            <span className="text-sm font-medium">5,810</span>
+            <span className="text-sm font-medium">{dictionary.subscriber}</span>
           </div>
 
           <nav className="hidden md:flex items-center space-x-6">
@@ -35,19 +37,19 @@ export default function Header() {
               href="#"
               className="text-sm hover:text-gray-600 transition-colors"
             >
-              World
+              {dictionary.world}
             </Link>
             <Link
               href="#"
               className="text-sm hover:text-gray-600 transition-colors"
             >
-              Business
+              {dictionary.business}
             </Link>
             <Link
               href="#"
               className="text-sm hover:text-gray-600 transition-colors"
             >
-              Lifestyle
+              {dictionary.lifestyle}
             </Link>
 
             {/* <!-- Language Switcher --> */}
