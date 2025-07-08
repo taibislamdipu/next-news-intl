@@ -1,3 +1,4 @@
+import { getDate } from "@/utils/getDate";
 import Image from "next/image";
 
 export default async function NewsDetails({ id }) {
@@ -97,9 +98,9 @@ export default async function NewsDetails({ id }) {
             <div className="sticky top-8 space-y-6">
               {/* <!-- Author Info --> */}
               <div>
-                <h3 className="text-lg font-medium mb-2">Yagami Sonichrou</h3>
+                <h3 className="text-lg font-medium mb-2">{newsData.author}</h3>
                 <p className="text-sm text-gray-600 mb-4">
-                  January 30, 2024 9:43 am ET
+                  {getDate(newsData.pubDate)}
                 </p>
               </div>
 

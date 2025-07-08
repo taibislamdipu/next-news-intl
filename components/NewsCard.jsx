@@ -1,3 +1,4 @@
+import { getDate } from "@/utils/getDate";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -45,7 +46,7 @@ export default function NewsCard({ news }) {
               <span className="text-xs text-gray-500">{news.author}</span>
             </div>
             <span className="text-xs text-gray-400">
-              {news.pubDate} hours ago
+              {getDate(news.pubDate)}
             </span>
           </div>
         </div>
