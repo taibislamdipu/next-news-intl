@@ -11,7 +11,7 @@ function getLocale(request) {
   let headers = { "accept-language": acceptedLanguage };
   let languages = new Negotiator({ headers }).languages();
 
-  console.log(languages);
+  // console.log(languages);
 
   return match(languages, locales, defaultLocale); // -> 'en-US'
 }
