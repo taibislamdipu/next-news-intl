@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Featured() {
   return (
     <section className="mb-12">
@@ -22,7 +24,12 @@ export default function Featured() {
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-gray-200 rounded-full">
-                  <img src="./assets/avatar/avatar-1.png" alt="Sarah Chen" />
+                  <Image
+                    width={32}
+                    height={32}
+                    src="/assets/avatar/avatar-1.png"
+                    alt="Sarah Chen"
+                  />
                 </div>
                 <div>
                   <p className="text-sm font-medium">Sarah Chen</p>
@@ -38,10 +45,12 @@ export default function Featured() {
             </div>
           </div>
           <div className="order-1 lg:order-2">
-            <img
-              src="./assets/images/8400a044-9788-42d9-abe8-6c3c865d36db.png"
+            <Image
+              src="/assets/images/8400a044-9788-42d9-abe8-6c3c865d36db.png"
               alt="Sustainable energy"
               className="w-full h-64 lg:h-full object-cover"
+              width={288}
+              height={192}
             />
           </div>
         </div>
