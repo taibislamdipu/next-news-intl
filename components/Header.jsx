@@ -2,6 +2,7 @@ import { getDictionary } from "@/app/[lang]/dictionaries";
 import BroadcastIcon from "@/icons/BroadcastIcon";
 import Image from "next/image";
 import Link from "next/link";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default async function Header({ lang }) {
   const dictionary = await getDictionary(lang);
@@ -52,16 +53,7 @@ export default async function Header({ lang }) {
               {dictionary.lifestyle}
             </Link>
 
-            {/* <!-- Language Switcher --> */}
-            <div className="flex items-center space-x-2 text-sm">
-              <button className="px-2 py-1 bg-black text-white rounded transition-colors">
-                EN
-              </button>
-              <span className="text-gray-400">|</span>
-              <button className="px-2 py-1 hover:bg-gray-100 rounded transition-colors">
-                বাং
-              </button>
-            </div>
+            <LanguageSwitcher />
           </nav>
         </div>
       </div>
