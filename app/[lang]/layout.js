@@ -15,6 +15,7 @@ export default function RootLayout({ children, params }) {
         <Header lang={params.lang} />
         <MarqueeBanner />
         {children}
+        <div id="modal-root-content" />
         <Footer />
       </body>
     </html>
