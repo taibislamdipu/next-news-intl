@@ -3,7 +3,7 @@ import { getDate } from "@/utils/getDate";
 import Image from "next/image";
 
 export default async function NewsDetails({ id, lang }) {
-  const res = await fetch(`http://localhost:3000/api/news/${id}`);
+  const res = await fetch(`${process.env.BASE_API_URL}/news/${id}`);
   const newsData = await res.json();
 
   const dictionary = await getDictionary(lang);

@@ -2,7 +2,7 @@ import Featured from "@/components/Featured";
 import NewsList from "@/components/NewsList";
 
 export default async function Home() {
-  const res = await fetch("http://localhost:3000/api/news");
+  const res = await fetch(`${process.env.BASE_API_URL}/news`);
   const newsData = await res.json();
 
   return (
