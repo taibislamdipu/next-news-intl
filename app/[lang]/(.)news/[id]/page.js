@@ -1,10 +1,11 @@
 import Modal from "@/components/Modal";
+import ModalContent from "@/components/ModalContent";
 
-const NewsModal = ({ params: { id, lang } }) => {
+const NewsModal = ({ params }) => {
+  const { id } = params;
   return (
     <Modal>
-      {/* <NewsDetails id={id} lang={lang} /> */}
-      Hello
+      <ModalContent id={id} />
     </Modal>
   );
 };

@@ -19,14 +19,16 @@ const Modal = ({ children }) => {
   }
 
   return createPortal(
-    <dialog
-      ref={modalRef}
-      onClose={onHide}
-      className="shadow-teal-700 shadow-md border border-teal-600 flex flex-col p-2 rounded-md dark:bg-black dark:bg-opacity-95 dark:text-gray-100"
-    >
-      <button onClick={onHide} className="flex justify-end cursor-pointer">
-        x
-      </button>
+    <dialog ref={modalRef} onClose={onHide}>
+      <div className="p-4 flex justify-end">
+        <button
+          onClick={onHide}
+          className="border w-8 h-8 rounded-full border-black"
+        >
+          x
+        </button>
+      </div>
+
       {children}
     </dialog>,
     document.getElementById("modal-root-content")
