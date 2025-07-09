@@ -12,9 +12,7 @@ export default async function NewsDetails({ id, lang }) {
     <div>
       <main className="max-w-7xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          {/* <!-- Article Content --> */}
           <article className="lg:col-span-3">
-            {/* <!-- Article Header --> */}
             <header className="mb-8">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal leading-tight mb-6">
                 {newsData.title}
@@ -31,7 +29,6 @@ export default async function NewsDetails({ id, lang }) {
               />
             </div>
 
-            {/* <!-- Article Body --> */}
             <div className="prose prose-lg max-w-none">
               <p className="text-lg leading-relaxed mb-6">
                 {newsData.description}
